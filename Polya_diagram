@@ -9,9 +9,10 @@ def V(c,d,n):
 def p(k,n,d):
 	return(math.comb(n,k)*(V(c,d,k)*V(b,d,n-k))/V(b+c,d,n))
 
-b = 5
-c = 5
-n = b+c
+b = 1
+c = 1
+n = 5
+# after pulling out a ball we throw it back to the urn and add d balls of the same color.
 d = 100
 for i in range(0,n+1):
-	print(p(i,n,d))
+	print("probability of pulling out {} black balls in {} draws is {}".format(i,n,p(i,n,d)))
