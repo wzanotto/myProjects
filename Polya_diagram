@@ -1,0 +1,17 @@
+import math
+
+def V(c,d,n):
+	prod=1
+	for i in range(0,n):
+		prod = prod*(c+i*d)
+	return prod
+
+def p(k,n,d):
+	return(math.comb(n,k)*(V(c,d,k)*V(b,d,n-k))/V(b+c,d,n))
+
+b = 5
+c = 5
+n = b+c
+d = 100
+for i in range(0,n+1):
+	print(p(i,n,d))
