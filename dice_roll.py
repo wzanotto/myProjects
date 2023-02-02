@@ -25,10 +25,13 @@ def experiment(n):
 	sum=0
 	for i in range(0,n):
 		A = outcome()
-		print("{}. outcome: {}  rolls: {} \n".format(i,A,X(A)))
+		#print("{}. outcome: {}  rolls: {} \n".format(i,A,X(A)))
 		sum = sum + X(A)
 	print("rolls mean: ",sum/n)
 
-experiment(5)
+# EX = E(X_1 + ... + X_6) = sum_i=0^{6}E(X_i) where X_i denotes the number of rolls until we roll a number different from the previous (i-1) numbers.
+# X_1, ..., X_6 have geometric distribiution with probabilities (7-i)/6 thus their expected value is E(X_i) = 6/(7-i)
+# By computing EX we get 6 + 3 + 2 + 1.5 + 1.2 + 1 = 14.7 which is the limit of our empirical Expected value.
+experiment(1000)
 
 
