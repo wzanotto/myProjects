@@ -8,8 +8,8 @@ def outcome(p,q):
 
 # In this experiment we calculate the number of particles at time = n. A particle transforms into new m particles every step with a probability of p/q or it disappears. 
 def experiment(n):
-	p = 12
-	q = 11
+	p = 1
+	q = 2
 	m = 2
 	population_start = 1
 	for t in range(2,n+1):
