@@ -28,7 +28,6 @@ def experiment(n):
 # Expected population 
 def expected(N,n):
 	sum = 0
-	N = 10
 	for i in range(0,N):
 		sum = sum + experiment(n)
 	return sum/N
